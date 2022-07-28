@@ -1,0 +1,459 @@
+/* TODOfor pc view */
+/* below 1344 px */
+/* 1em = 16px */
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    margin: 1.8rem 2.4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* TODOfor tablets ladscape view */
+/* below 1200px/16px */
+@media (max-width: 75em) {
+  html {
+    /* 9px/16px */
+    font-size: 56.25%;
+  }
+
+  grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    margin: 1.8rem 2.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .testimonial-container {
+    padding: 9.6rem 3.2rem;
+  }
+}
+
+/* TODObelow 960px/16px */
+/* for tablets potrait view */
+@media (max-width: 60em) {
+  html {
+    /* 8px/16px */
+    font-size: 50%;
+  }
+
+  grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    margin: 1.8rem 2.4rem;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+    gap: 6.4rem;
+  }
+
+  .logos img {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cta {
+    grid-template-columns: 3fr 2fr;
+    height: 75rem;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .testimonial-container {
+    padding: 9.6rem 3.2rem;
+  }
+
+  /* mobile navigation */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    /* for chrome */
+    backdrop-filter: blur(6px);
+    /* for safari */
+    /* not supported in firefox */
+    -webkit-backdrop-filter: blur(6px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    /* display: none; cannot be animated while it can be done with the opacity */
+    /* to hide it visually */
+    opacity: 0;
+    /* make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* hide from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  /* only when nav-open class exists the close icon will appear */
+  .nav-open .icon-mobile-nav[name="close-circle-outline"] {
+    display: block;
+  }
+
+  /* hide the hamburder menu icon when nav-open class is in use */
+  .nav-open .icon-mobile-nav[name="ellipsis-vertical-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+    padding: 0;
+  }
+
+  .main-nav-link {
+    font-size: 3rem !important;
+  }
+}
+
+/* TODOat 700px
+700/16 ~= 44em */
+@media (max-width: 44em) {
+  .btn,
+  .btn:link,
+  .btn:visited {
+    margin: 1.8rem 2.4rem;
+  }
+
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .pricing-plan {
+    width: 90%;
+  }
+
+  .grid-footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    grid-row: 2;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/* TODOfor mobile view */
+/* BELOW 550 px */
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid--2-cols {
+    align-items: center;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+    margin: 1.8rem 2.4rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 0 1.8rem;
+  }
+
+  .delivered-meals {
+    margin-top: 1.6rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  .heading-secondary {
+    text-align: center;
+    width: 100%;
+    height: 12.8rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .step-number {
+    font-size: 6.4rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  .meal {
+    margin-top: 4.8rem;
+    width: 80%;
+    
+  }
+
+  /* .list {
+    padding: 0;
+    transform: translateX(5%);
+  } */
+
+  .container {
+    justify-items: center;
+  }
+
+  .subheading {
+    text-align: center;
+  }
+
+  .section-testimonials {
+    justify-items: center;
+  }
+
+  .testimonial-container {
+    padding: 1.8rem;
+  }
+
+  .testimonials {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 4.8rem;
+    align-items: start;
+    /* column-gap: 4.8rem; */
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 1.2rem;
+  }
+
+  .container {
+    padding: 0 1.8rem !important;
+  }
+
+  .pricing-plan {
+    border-radius: 1.1rem;
+    width: 65%;
+    justify-self: center;
+  }
+
+  .pricing-plan--complete:after {
+    top: 8%;
+    right: -17%;
+    background-color: #ffd43b;
+    padding: 0.8rem 8rem;
+  }
+
+  .cta-img-box {
+    display: none;
+  }
+
+  .cta {
+    height: auto;
+    align-self: center;
+    display: block;
+  }
+
+  .grid-footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col, 
+  .nav-col {
+    grid-column: span 2;
+  }
+
+  .nav-col {
+    grid-row: 2;
+  }
+}
+
+/* safari flexbox gap property fix for its older versions */
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}

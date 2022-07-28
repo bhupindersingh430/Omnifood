@@ -1,0 +1,241 @@
+/*
+--- 01 typography system
+      - FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+      - FONT WEIGHT
+        DEFAULT: 400
+        MEDIUM: 500
+        SEMI-BOLD: 600
+        BOLD: 600
+      - LINE HEIGHT
+      DEFAULT: 1
+      PARAGRAPH: 1.6
+      - LETTER SPACING
+      DEFAULT : 1
+      SMALL: 1.05
+      MEDIUM: 1.2
+      PARAGRAPH DEFAULT: 1.4
+      LARGE: 1.8
+
+--- 02 COLORS
+    - PRIMARY: #e67e22
+    - TINTS: #fdf2e9
+             #fae5d3
+    - SHADES: #cf711f
+              #eea564
+              #45260a
+              #2e1907
+    - ACCENTS:
+    - GREYS: #333 
+             #555
+             #6f6f6f
+             #767676
+             #888
+             #aaa
+
+--- 05 SHADOWS
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.1);
+
+--- 06 BORDER-RADIUS
+       DEFAULT: 5px, 9px, 12px
+--- 07 WHITESPACE
+      - SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+TODO * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  /* the below property only works if nothing is position absolutely in relation to the body rather use relative positioning wrt body */
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  /* 10 px in other words since 16px is 100% */
+  /* below property avoids any horizontal scrolling and hides the content which falls out of the viewport width */
+  overflow-x: hidden;
+  /* scroll-behavior works for chrome and firefox */
+  /* scroll-behavior: smooth; */
+}
+
+/****************/
+/*TODO GENERAL REUSABLE COMPONENTS */
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.container-height {
+  height: 80rem;
+}
+
+.grid {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1;
+  margin-bottom: 3.2rem;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 2.6rem !important;
+  padding: 1.6rem 3.2rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  font-size: 1.8rem;
+  align-self: end;
+  padding: 1.48rem;
+}
+
+.btn--form:hover {
+  background-color: #2e1907;
+  color: #fdf2e9;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #cf711f;
+  color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  /* trick to add border inside */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 1px 0.4rem rgba(46,25,7, 0.7) !important;
+  
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  font-size: 3rem;
+  color: #e67e22;
+}
